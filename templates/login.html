@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% set active_page = "login" %}
+{% block content %}
+<div class="column is-4 is-offset-4">
+  <div class="box">
+    <form method="POST" action="/login">
+      <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="{{ url_for('static',filename='img/logo.jpg') }}" id="icon" alt="User Icon" />
+          </div>
+
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="email" class="input fadeIn second" name="email" placeholder="E-mail" autofocus="" required>
+            <input type="password" id="password" class="input fadeIn third" name="password" placeholder="Password" required>
+            <input type="submit" class="fadeIn fourth" value="Login">
+          </form>
+          <!-- Remind Password -->
+          <div id="formFooter">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" id="remember">
+              Remember me
+            </label>
+            <div>
+              <a class="underlineHover" href="#">Forgot Password?</a>
+              {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <div class="notification is-danger">
+              {{ messages[0] }}
+              </div>
+              {% endif %}
+              {% endwith %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

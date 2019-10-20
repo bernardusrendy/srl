@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+<!doctype html>
+<title>New Profile</title>
+
+<div class="col-sm-6 col-md-6 offset-3">
+  <div class="box">
+    <div class="wrapper fadeInDown">
+      <div id="formContent" style="text-align: left; max-width: none;">
+        <div class="m-4">
+          <h1>New Input</h1>
+          
+          <form method="post" action="" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-2 ml-3 mt-2 pt-1">
+                <span style="color: #cccccc; font-weight: 600; text-transform: uppercase;">Name</span>
+              </div>
+              <div class="col-8">
+                <input type="text" name="1.nama" placeholder="Nama Lengkap" required>  
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 ml-3 mt-2 pt-1">
+                <span style="color: #cccccc; font-weight: 600; text-transform: uppercase;">Sex</span>
+              </div>
+              <div class="col-8 ml-3" style="padding: 5px 10px; margin: 5px;">
+                <input type="radio" name="2.gender" value="Laki-Laki" required=""> <span style="color: #cccccc; font-size: 18px">Male</span>
+                <input type="radio" name="2.gender" value="Perempuan" required=""> <span style="color: #cccccc; font-size: 18px">Female</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 ml-3 mt-2 pt-1">
+                <span style="color: #cccccc; font-weight: 600; text-transform: uppercase;">Age</span>
+              </div>
+              <div class="col-8">
+                <input type="text" style="width:17.5%" name="3.usia" placeholder="0-99" min='0' max='99' required="">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-2 ml-3 mt-2 pt-1">
+                <span style="color: #cccccc; font-weight: 600; text-transform: uppercase;">Origin</span>
+              </div>
+              <div class="col-8">
+                <input type="text" name="4.daerah" placeholder="Asal Daerah" required="">
+              </div>
+            </div>
+            <input type="submit" name="action" value="Submit">
+            <input type="submit" name="action" value="Cancel">
+          </form>
+          <div id="formFooter">
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <div>{{ messages[0] }}</div>
+              <!-- <ul class=flashes>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul> -->
+              {% endif %}
+            {% endwith %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form >
+  
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+####################################
+#                                  #
+#         Dependencies List        #
+#	     Web SPKREC	     	   #
+#                                  #
+####################################
+
+1. flask
+2. flask-sqlalchemy
+3. flask-login
+
+	pip install flask flask-sqlalchemy flask-login
+           		      atau
+	python3 -m pip install flask flask-sqlalchemy flask-login
+
+#################################################################
+
+4. sqlitebrowser --> Untuk melihat dan memodifikasi apa yang ada di dalam SQL
+		sudo apt-get install sqlitebrowser
+
+####################################
+#                                  #
+#         HTML Dependencies        #
+#	     Web SPKREC	     	   #
+#                                  #
+####################################
+1. Bootstrap 4.1.3
+2. jquery 3.3.1
+3. popper.js 1.14.3
+4. 

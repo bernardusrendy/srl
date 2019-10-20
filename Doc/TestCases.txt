@@ -1,0 +1,36 @@
+####################################
+#                                  #
+#            TEST CASES            #
+#	     Web SPKREC	     	   #
+#                                  #
+####################################
+
+UPLOAD FILE
+- Kalau belum milih file --> Can't Proceed
+- Kalau ekstensi file tidak sesuai --> Can't Proceed (( Ekstensinya apa saja ? ))
+- Kalau file terlalu besar * --> Can't Proceed
+- Sebelum dinamai, file akan disimpan sebagai temp + session id 
+- Ada python untuk menghapus temp secara otomatis
+- File disimpan dalam folder berjudul 'nama'; judul file akan berupa angka (1,2,3,...)
+
+ISI DATA
+- Data : Nama, Jenis Kelamin, Usia, Asal (( Data yang harus ada apa aja ))
+- Kalau nama duplikat --> Proceed, without updating the database; Data masuk dengan nama berupa angka selanjutnya (1,2,3,...)
+- Kalau data ga lengkap --> Can't Proceed
+- Semua data masuk ke database SQLite
+
+USER LIST
+- List No ID dan Nama
+- Nama bisa di klik ke halaman User Profile
+
+USER PROFILE
+- No ID unik tiap user (berupa angka /user/<userid>)
+- Menampilkan data2 teks 
+- Menampilkan data2 suara
+
+SIGNUP
+- Validasi untuk email*
+- Validasi udah keisi semua*
+
+* = Belum diimplementasikan dan divalidasi
+

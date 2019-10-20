@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page = "analyze" %}
+{% block content %}
+<!doctype html>
+<div class="column is-4 is-offset-4">
+	<div class="box">
+		<div class="wrapper fadeInDown">
+			<div id="formContent">
+				<div class="mt-4">
+					<h1>Select a file to upload</h1>
+				</div>
+				<form method="post" action="" enctype="multipart/form-data">
+				  <div class="custom-file-upload">
+				    <input type="file" name="file" class="text-center" autocomplete="off" required>
+				    <input type="submit" class="fadeIn first mb-4" value="Submit">
+				   </div>
+				</form>
+				<div id="formFooter">
+		            <div>
+		              {% with messages = get_flashed_messages() %}
+		              {% if messages %}
+		              <div class="notification is-danger">
+		              {{ messages[0] }}
+		              </div>
+		              {% endif %}
+		              {% endwith %}
+		            </div>
+		        </div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

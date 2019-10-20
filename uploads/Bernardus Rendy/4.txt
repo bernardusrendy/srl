@@ -1,0 +1,2 @@
+Adam Khoo trading lecture
+Laplace transform for time independent transfer function

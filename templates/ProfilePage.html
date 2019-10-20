@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1> Nama: {{ nama }}</h1>
+    <p> Gender : {{ gender }} </p>
+    <p> Usia : {{ usia }}</p>
+    <p> Asal : {{ asal }} </p>
+
+<hr>
+<h1>Berkas {{ tree.name }}</h1>
+<ul>
+{%- for item in tree.children recursive %}
+    <li><a href="/static/{{ userid }}/{{ item.name }}">{{ item.name }}</a></li>
+{%- endfor %}
+</ul>
+
+{% endblock %}
