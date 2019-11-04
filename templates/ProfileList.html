@@ -9,50 +9,28 @@
 </head>
 
 <!-- Adding some style to table (OPTIONAL) -->
-<style type="text/css">
-  th:tr {
-    color: blue;
-
-  }
-
-  tr:nth-of-type(2n) {
-    border: 1px solid black;
-    background-color: rgba(150, 150, 150, 0.5);
-
-  }
-
-  td {
-    padding: 8px 8px;
-    border: 1px solid black;
-  }
-</style>
-
 <body>
-
-  <table style="margin-left: 20px;">
-    <!-- Table headers -->
-    <th>
-      <tr style="color: green; ">
-        <td>ID</td>
-        <td>Nama</td>
-      </tr>
-    </th>
-
-    <!-- For loop logic of jinja template -->
-    {%for i in range(0, len)%}
-
-    <!-- table rows -->
-    <tr>
-      <td>{{ listid[i] }}</td>
-      <td><a href="/profile/{{ listid[i] }}">{{ listnama[i] }}</a></td>
-
-      {%endfor%}
-
-    </tr>
-
-  </table>
-
-
+  <div class="wrapper fadeInDown" style="justify-content: normal;">
+    <div style="text-align: left; max-width: none;">
+      <table class="table table-dark" style="background-color: #151515!important;">
+        <!-- Table headers -->
+        <thead style="text-align: left; background-color:#151515">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nama</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for i in range(0, len)%}
+          <tr>
+            <td>{{ listid[i] }}</td>
+            <td><a href="/profile/{{ listid[i] }}">{{ listnama[i] }}</a></td>
+            {%endfor%}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
 
 </html>
