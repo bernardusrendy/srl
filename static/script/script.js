@@ -45,6 +45,8 @@ function validateEmail(id)
 
 $(document).ready(function()
 {
+    $('#profileList').DataTable();
+    $('.dataTables_length').addClass('bs-select');
     $("#contactButton").click(function()
     {
          if(!validateText("contactName"))
